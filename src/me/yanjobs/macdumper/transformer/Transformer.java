@@ -1,4 +1,4 @@
-package me.accessmodifier364.dumper.transformer;
+package me.yanjobs.macdumper.transformer;
 
 import java.io.FileOutputStream;
 import java.io.IOException;
@@ -10,14 +10,7 @@ import java.security.ProtectionDomain;
 import java.util.Arrays;
 import java.util.List;
 
-import static me.accessmodifier364.dumper.Dumper.directory;
-
-/**
- * https://stackoverflow.com/questions/27115371/overriding-the-classloader-to-get-every-loaded-class-bytes-and-name
- *
- * @author accessmodifier364
- * @since 11-Nov-2021
- */
+import static me.yanjobs.macdumper.Dumper.directory;
 
 public class Transformer implements ClassFileTransformer {
 

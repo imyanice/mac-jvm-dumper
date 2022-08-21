@@ -1,2 +1,3 @@
 Manifest-Version: 1.0
+Agent-Class: me.accessmodifier364.dumper.Dumper
 Premain-Class: me.accessmodifier364.dumper.Dumper
