@@ -20,7 +20,6 @@ public class Transformer implements ClassFileTransformer {
 
         if (shouldDump(className)) {
 
-            System.out.println("Dumping: " + className);
 
             String newName = className + ".class";
 
@@ -36,6 +35,7 @@ public class Transformer implements ClassFileTransformer {
                 FileOutputStream fos = new FileOutputStream(directory + "classes/" + newName);
                 fos.write(classfileBuffer);
                 fos.close();
+                System.out.println("Dumping: " + className + "on:" +  directory + "classes/" + newName);
             } catch (IOException e) {
                 System.out.println("Error writing class: " + e.getMessage());
             }
@@ -59,7 +59,7 @@ public class Transformer implements ClassFileTransformer {
     //This classes won't be dumped from the JVM.
     private final List<String> exclusions = Arrays.asList(
             "java", "sun", "javax", "jdk", "net/minecraft",
-            "com/sun", "org/spongepowered"
+            "com/sun", "org/spongepowered", "com/google"
     );
 
 }
